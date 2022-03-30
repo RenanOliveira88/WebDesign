@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+        <div class="container">
+            <h1>Comparação entre DOM lv 0 e DOM lv 2</h1>
+            <button id="btn1" onclick="clicar()">Botão 1</button>
+            <button id="btn2">Botão 2</button>
+            <button id="btn3">Botão 3</button>
+                    
+        </div>
+		<script>
+            var btn2 = document.getElementById("btn2");
+            var btn3 = document.getElementById("btn3");
+            
+            btn2.onclick= clicar;
+            
+            btn3.addEventListener("click", clicar);
+            
+            function clicar(){
+                alert("clicou no botão!");
+            }
+            
+        </script>
+	</body>
+</html>
