@@ -14,12 +14,12 @@
 	<body>
         <div class="container">
            <h1>Validador de formulário</h1><br/>
-            <form method="#">
+            <form action="#" method="POST">
                 <label for="txtUser">Usuário</label>
                 <input type="text" id="txtUser" name="txtUser"><br>
                 <label for="txtPass">Senha</label>
                 <input type="text" id="txtPass" name="txtPass"><br>
-                <button type="button" id="btnLoga">Logar</button>
+                <button type="submit" id="btnLoga">Logar</button>
                 
             </form>
         </div>
@@ -27,13 +27,15 @@
 		<script>
             (function(){
                 'use strict';
+                var $form = document.querySelector('form');
                 var $txtUser = document.getElementById('txtUser');
                 var $txtPass = document.getElementById('txtPass');
                 var $btnLoga = document.getElementById('btnLoga');
                 
-                $btnLoga.addEventListener('click', function(){
+                $form.addEventListener('submit', function(e){
                     if (!$txtUser.value || !$txtPass.value){
                         alert("preencha todos os campos");
+                        e.preventDefault();
                     }
                 });
             })()
