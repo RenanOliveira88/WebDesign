@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+        <div class="container">
+           <h1>Validador de formulário</h1><br/>
+            <form method="#">
+                <label for="txtUser">Usuário</label>
+                <input type="text" id="txtUser" name="txtUser"><br>
+                <label for="txtPass">Senha</label>
+                <input type="text" id="txtPass" name="txtPass"><br>
+                <button type="button" id="btnLoga">Logar</button>
+                
+            </form>
+        </div>
+        
+		<script>
+            (function(){
+                'use strict';
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btnLoga = document.getElementById('btnLoga');
+                
+                $btnLoga.addEventListener('click', function(){
+                    if (!$txtUser.value || !$txtPass.value){
+                        alert("preencha todos os campos");
+                    }
+                });
+            })()
+            
+        </script>
+	</body>
+</html>
