@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+        <div class="container">
+           <h1>Contador de caracteres</h1><br/>
+            <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+            <div class="container" id="divContainer" style="display: none;">
+                <span id="resta">Restam caracteres</span>
+            </div>
+        </div>
+        
+		<script>
+            (function(){
+                var $msg = document.getElementById('msg');
+                var $resta = document.getElementById('resta');
+                var $divContainer = document.getElementById('divContainer');
+                $divContainer.style.display = 'block';
+                var maxima = $msg.maxLength;
+                
+                $resta.textContent = 'Restam ' + maxima + " caracteres";
+                $msg.addEventListener('input', checkLength);
+                
+                function checkLength(){
+                    $resta.textContent =  'Restam ' + (maxima - this.value.length) + ' caracteres'; 
+                }
+            })()
+            
+        </script>
+	</body>
+</html>
