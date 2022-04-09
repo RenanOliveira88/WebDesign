@@ -44,10 +44,28 @@
             (function (){
                 var $ps = document.querySelectorAll('p');
                 
+<<<<<<< HEAD
                 $ps.forEach(function (e, i){
                     var vetorTexto = e.innerHTML.split(' ');
                     e.innerHTML = vetorTexto.length > 10 ? vetorTexto.slice(0,10).join(' ') + "..."  : e.innerHTML;
-
+=======
+                console.log($ps);
+                $ps.forEach(function (e, i){
+                    var vetorTexto = e.innerHTML.split(' ');
+                    
+                    if (vetorTexto.length > 10) {
+                        console.log(vetorTexto);
+                        var novoTexto = ' ';
+                        var x = 0;
+                        for (x = 0; x <= 10; x++){
+                            novoTexto += vetorTexto[x] + ' ';
+                        }
+                        novoTexto += "...";
+                        
+                        e.innerHTML = novoTexto;
+                    }
+>>>>>>> 72f3bdc32143ac88e87ba7877536452e2b70ff86
+                })
             })()
         </script>
 	</body>
