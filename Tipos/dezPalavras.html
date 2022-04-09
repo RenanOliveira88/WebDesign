@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        
+
+	</head>
+	<body>
+        <div class="container">
+           <h1>Encurtar Parágrafo</h1><br/>
+            
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.Cevadis im ampola pa arma uma pindureta.Pra lá , depois divoltis porris, paradis.</p>
+
+            <p>Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Quem manda na minha terra sou euzis!</p>
+
+            <p>Casamentiss faiz malandris se pirulitá.Delegadis gente finis, bibendum egestas augue arcu ut est.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Paisis, filhis, espiritis santis.</p>
+
+            <p>Não sou faixa preta cumpadi, sou preto inteiris, inteiris.Delegadis gente finis, bibendum egestas augue arcu ut est.Leite de capivaris, leite de mula manquis sem cabeça.Quem num gosta di mim que vai caçá sua turmis!</p>
+
+            <p>Per aumento de cachacis, eu reclamis.Sapien in monti palavris qui num significa nadis i pareci latim.Cevadis im ampola pa arma uma pindureta.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.</p>
+
+            <p>Leite de capivaris, leite de mula manquis sem cabeça.Detraxit consequat et quo num tendi nada.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.</p>
+
+            <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Sapien in monti palavris qui num significa nadis i pareci latim.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!A ordem dos tratores não altera o pão duris.</p>
+
+            <p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Quem num gosta di mé, boa gentis num é.Paisis, filhis, espiritis santis.</p>
+
+            <p>Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Leite de capivaris, leite de mula manquis sem cabeça.</p>
+
+
+        </div>
+
+        <script>
+        
+            (function (){
+                var $ps = document.querySelectorAll('p');
+                
+                console.log($ps);
+                $ps.forEach(function (e, i){
+                    var vetorTexto = e.innerHTML.split(' ');
+                    
+                    if (vetorTexto.length > 10) {
+                        console.log(vetorTexto);
+                        var novoTexto = ' ';
+                        var x = 0;
+                        for (x = 0; x <= 10; x++){
+                            novoTexto += vetorTexto[x] + ' ';
+                        }
+                        novoTexto += "...";
+                        
+                        e.innerHTML = novoTexto;
+                    }
+                })
+            })()
+        </script>
+	</body>
+</html>
