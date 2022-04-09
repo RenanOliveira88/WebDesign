@@ -44,21 +44,9 @@
             (function (){
                 var $ps = document.querySelectorAll('p');
                 
-                console.log($ps);
                 $ps.forEach(function (e, i){
                     var vetorTexto = e.innerHTML.split(' ');
-                    
-                    if (vetorTexto.length > 10) {
-                        console.log(vetorTexto);
-                        var novoTexto = ' ';
-                        var x = 0;
-                        for (x = 0; x <= 10; x++){
-                            novoTexto += vetorTexto[x] + ' ';
-                        }
-                        novoTexto += "...";
-                        
-                        e.innerHTML = novoTexto;
-                    }
+                    e.innerHTML = vetorTexto.length > 10 ? vetorTexto.slice(0,10).join(' ') + "..."  : e.innerHTML;
                 })
             })()
         </script>
