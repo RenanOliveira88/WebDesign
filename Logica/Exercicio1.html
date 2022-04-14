@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <p id="subtracao"></p>
+        <p id="multiplicacao"></p>
+        <p id="divisao"></p>
+        <p id="soma"></p>
+        <script>
+            
+            var num1 = parseInt(prompt("Digite um número: "));
+            var num2 = parseInt(prompt("Digite um novo numero:"));
+                        
+            var $subtracao = document.getElementById("subtracao");
+            var $multiplicacao = document.getElementById("multiplicacao");
+            var $divisao = document.getElementById("divisao");
+            var $soma = document.getElementById("soma");
+
+                        
+            $subtracao.textContent = "a subtração é: " + (num1 - num2);
+            $multiplicacao.textContent = "a multiplicação é: " + (num1 * num2);
+            
+
+            if (num2 != 0){
+                $divisao.textContent = "a divisao é: " + (num1 / num2);
+            }
+            
+            $soma.textContent= "a soma é: " + (num1 + num2);
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <p id="resto"></p>
+        <p id="potencia"></p>
+
+        <script>
+            
+            var num1 = parseInt(prompt("Digite um número: "));
+            var num2 = parseInt(prompt("Digite um novo numero:"));
+            
+                        
+            var $resto = document.getElementById("resto");
+            var $potencia = document.getElementById("potencia");
+
+            $potencia.textContent = "a potenciação é: " + (num1 ** num2);
+            
+
+            if (num2 != 0){
+                $resto.textContent = "o resto é: " + (num1 % num2);
+            }
+
+            
+        </script>
+    </body>
+</html>

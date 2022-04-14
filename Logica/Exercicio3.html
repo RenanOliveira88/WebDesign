@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+    </body>
+    
+    <script>
+    
+        var numRandom =  parseInt(Math.random() * 2);
+        alert(numRandom);
+        var num1 = parseInt(prompt("Número do jogador 1: "));
+        var num2 = parseInt(prompt("Número do jogador 2: "));
+        
+        if (num1 === num2){
+            alert("Empate");  
+        }else if (numRandom === 0){
+            if (num1 < num2){
+                alert("Jogador 1 ganhou com número menor");
+            }else{
+                alert("Jogador 2 ganhou com número menor");
+            }
+        }else{
+            if (num1 > num2){
+                alert("Jogador 1 ganhou com número maior");
+            }else{
+                alert("Jogador 2 ganhou com número maior");
+            }
+            
+        }
+
+
+        // se o numero sorteado for 0, ganha quem escolher o numero MENOR
+        
+            
+        //se o numero sorteado for 1, ganha quem escolher o numero MAIOR
+
+    </script>
+</html>
