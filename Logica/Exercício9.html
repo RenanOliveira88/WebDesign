@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div id="output">
+            <table>
+                <tr>
+                    <th>Nome </th>
+                    <th>Email </th>
+                <tr>
+            </table>
+            
+        </div>
+    </body>
+
+    <script>
+        var arr = [{'nome' : 'renan', 'email' : 'renan2022@ig.com'},
+                   {'nome': 'carlos', 'email': 'carlos2021@bol.com'}];
+        $tabela = document.querySelector('#output table');
+        for (var i = 0; i < arr.length;i++){
+            var linha = "<tr><td>" + arr[i].nome + "</td><td>" + arr[i].email + "</td></tr>";
+            $tabela.innerHTML += linha;
+        }
+        
+    </script>
+</html>
