@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+    </body>
+
+    <script>
+        document.write("<p></p>");
+        var $display = document.querySelector("p");
+        
+        var dias =  new Array();
+        dias = ["domingo","segunda","terça","quarta","quinta","sexta","sábado"];
+        
+        var hoje = new Date();
+        
+        $display.textContent = "Hoje é " + dias[ hoje.getDay()];
+        
+    </script>
+</html>

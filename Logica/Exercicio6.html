@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <button type="button" id="soma">+</button>
+        <button type="button" id="subtracao">-</button>
+        <button type="button" id="divisao">/</button>
+        <button type="button" id="multiplicacao">*</button>
+        
+    </body>
+
+    <script>
+        var $soma = document.getElementById("soma");
+        var $subtracao = document.getElementById("subtracao");
+        var $divisao = document.getElementById("divisao");
+        var $multiplicacao = document.getElementById("multiplicacao");
+        var numero = pegarNumero()
+    
+        document.write("<p>" + numero + "</p>");
+        var $display = document.querySelector("p");
+        
+        $soma.addEventListener("click", calcular);
+        $subtracao.addEventListener("click", calcular);
+        $divisao.addEventListener("click", calcular);
+        $multiplicacao.addEventListener("click", calcular);
+        
+        
+        function calcular(e){
+            var novoNumero = pegarNumero();
+            var chamador = e.target.getAttribute("id");
+            switch(chamador){
+                case "soma":
+                    numero += novoNumero;
+                    break;
+                case "subtracao":
+                    numero -= novoNumero;
+                    break;
+                case "divisao":
+                    if (novoNumero === 0){
+                        alert("Não é possível dividir por zero");
+                        break;
+                    }
+                    numero /= novoNumero;
+                    break;
+                case "multiplicacao":
+                    numero *= novoNumero;
+                    break;
+                default: alert("Opção inválida");
+            }
+            mostrarNumero();
+        }
+        
+        function pegarNumero(){
+            return parseInt(prompt("informe novo número: "));
+        }
+        function mostrarNumero(){
+            $display.textContent = numero;
+        }    
+
+    </script>
+</html>
