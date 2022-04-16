@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+        <h1>Calcular Media</h1>
+
+        <form action="#">
+            <label for="altura">Altura: </label><input type="text" id="altura">
+            <label for="peso">Peso: </label><input type="text" id="peso">
+            <button type="button">Calcular</button>
+        </form>
+        <p id="imc">
+            Seu IMC é de: 
+        </p>
+        <p id="resultado">
+            Seu peso é considerado:
+        </p>
+        <script>
+            (function(){
+                var $altura = document.getElementById("altura");
+                var $peso = document.getElementById("peso");
+                var $imc = document.getElementById("imc");
+                var $resultado = document.getElementById("resultado");
+                var $botao = document.querySelector("button");
+                
+                $botao.addEventListener('click',function (){
+                    var altura = parseFloat($altura.value.replaceAll(',','.'));
+                    var peso = parseFloat($peso.value.replaceAll(',','.'));                                            
+                    var imc = calcularIMC(altura, peso);
+                    debugger;
+                    $imc.textContent = imc;
+                    
+                    $resultado.textContent = mostrarIMC(imc);
+                });
+                function calcularIMC(altura, peso){
+                    return (peso / (altura**2));
+                }
+                function mostrarIMC(imc){
+                    
+                    if (imc <= 16.9){
+                        return "Muito abaixo do peso";
+                    }
+                    if (imc <= 18.4){
+                        return "Abaixo do peso";
+                    }
+                    if (imc <= 24.9){
+                        return "Peso normal";
+                    }
+                    if (imc <= 29.9){
+                        return "Acima do peso";
+                    }
+                    if (imc <= 34.9){
+                        return "Obesidade";
+                    }
+                    
+                    return "Chamar o dr. nowzaradan";
+                }
+            })();
+        </script>
+	</body>
+</html>
+		
+
+
+        
