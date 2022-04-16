@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+        <h1>Calcular Media</h1>
+
+        <p id="output">
+            Média: 
+        </p>
+        <script>
+            (function(){
+                var $output = document.getElementById("output");
+                
+                function calcularMedia(){
+                    var soma = 0;
+                    var qtd= 0;
+                    while(typeof arguments[qtd] === "number"){
+                        soma+= arguments[qtd++];
+                    }
+                    
+                    $output.textContent= "Média: " + soma/qtd;
+                }
+                calcularMedia(10,7,4,3 );
+            })();
+        </script>
+	</body>
+</html>
