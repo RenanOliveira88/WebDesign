@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Renan">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            form{
+                background-image: linear-gradient(to top left, #3082a0, #8ec2d4);
+                padding: 20px;
+                border-radius: 5%;
+            }
+            .gridItem{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+            .gridContainer{
+                width: 250px;
+                display: grid;
+                grid-template-rows: 50px repeat(4, 25px);
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+                grid-template-areas:
+                    "display   display   display   display"
+                    "cabecalho cabecalho cabecalho cabecalho"
+                    "numeros   numeros   numeros   lateral"
+                    "numeros   numeros   numeros   lateral"
+                    "numeros   numeros   numeros   lateral"
+                    "rodape    rodape    rodape    lateral"
+                
+            }
+            .gridContainer button{
+                background-color: #bcd9e3;
+            }
+            .display{
+                grid-area: display;
+            }
+            .cabecalho{
+                grid-area: cabecalho;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 5px;
+            }
+            .numeros{
+                grid-area: numeros;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 5px;
+            }
+            .lateral{
+                grid-area: lateral;
+                display: grid;
+                grid-template-rows: 1fr 1fr 2fr;
+                grid-gap: 5px;
+                
+            }
+            .rodape{
+                grid-area: rodape;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-gap: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Grid Layout</h2>
+        
+        
+        
+        <form action="#" class="gridContainer">
+            <input type="text" readonly class="display">
+            
+            <div class="cabecalho">
+                <button type="button">AC</button>
+                <button type="button">%</button>
+                <button type="button">X</button>
+                <button type="button">/</button>
+            </div>
+            <div class="numeros">
+                <button type="button">7</button>
+                <button type="button">8</button>
+                <button type="button">9</button>
+                
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button">6</button>
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+            </div>
+            
+            <div class="lateral">
+                <button type="button">.</button>
+                <button type="button">=</button>
+                <button type="button">+</button>
+            </div>
+
+            <div class="rodape">
+                <button type="button">0</button>
+                <button type="button">,</button>
+            </div>
+
+        </form>
+    </body>
+</html>
