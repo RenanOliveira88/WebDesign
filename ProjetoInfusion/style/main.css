@@ -27,9 +27,24 @@ abbr[title]{
     text-align: right;
     
 }
-.header__nav{
-    clear:left;
+.header__btnMenu{
+    float: right;
+    margin: 1.5em;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
 
+.header__nav{
+    clear:both;
+
+}
+.js .header__nav{
+    transition: max-height 1s;
+}
+.js header{
+    position: fixed;
+    width:100%;
 }
 .header__nav ul{
     margin: 0;
@@ -44,6 +59,7 @@ abbr[title]{
 
     
 }
+
 .header__nav a{
     text-decoration: none;
     color:white;
@@ -256,7 +272,7 @@ abbr[title]{
 .footer__logo{
     text-transform: uppercase;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1025px){
     .header{
         position: fixed;
     }
