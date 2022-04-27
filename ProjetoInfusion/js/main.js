@@ -7,5 +7,18 @@
         container: '.header__nav',
         toggleBtn: '.header__btnMenu',
         widthEnabled: 1024
-    } )
+    } );
+    
+    var carouselImgs = new Carousel({
+        container: '.laptop-slider .slider',
+        itens: 'figure',
+        btnPrev: '.prev',
+        btnNext: '.next'
+    })
+    var carouselImgs = new Carousel({
+        container: '.quotes',
+        itens: 'figure',
+        btnPrev: '.prev',
+        btnNext: '.next'
+    }) 
 } )()

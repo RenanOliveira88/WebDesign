@@ -45,6 +45,89 @@ abbr[title]{
 .js header{
     position: fixed;
     width:100%;
+    z-index: 10;
+}
+.js .laptop-slider{
+    overflow: hidden;
+}
+.js .laptop-slider .slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+.js .laptop-slider figure{
+
+    opacity: 0;
+    transition: opacity 1s;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.js .laptop-slider figure.show{
+    opacity: 1;
+    position: static;
+
+}
+
+.js .laptop-slider .prev, .js .laptop-slider .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+}
+.js .laptop-slider .prev{
+    left: 10px;
+}
+.js .laptop-slider .next{
+    right: 10px;
+    
+}
+
+.js .quote-container{
+    overflow: hidden;
+    max-height: 110px;
+}
+.js .quote-container .quotes{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+
+.js .quote-container figure{
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.js .quote-container figure.show{
+    opacity: 1;
+    position: static;
+   
+}
+
+.js .quotes .prev, .js .quotes .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+}
+
+.js .quote-container .prev{
+    left: 10px;
+}
+.js .quote-container .next{
+    right: 10px;
 }
 .header__nav ul{
     margin: 0;
