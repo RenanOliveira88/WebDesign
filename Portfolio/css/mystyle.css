@@ -12,7 +12,7 @@ header{
     margin: 0;
     background-color: black;
     display:inline-block;
-
+    background-image:  linear-gradient(to left, transparent 0%, #000 60%), url('../img/computador.jpg');
     background-position:bottom;
     background-position: right;
     background-repeat: no-repeat;
@@ -59,16 +59,61 @@ header{
 }
 .container{
     text-align: center;
+    height: 100vh;
+    overflow:hidden;
+    margin-top: 10vh;
 }
 .container-1-2{
     display: inline-block;
     width: 46%;
-    height: 48vh;
+    height: 46vh;
     margin: 1%;
     background-size: cover;
 }
-.fade{
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
 
+}
+.slider figure{
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider figure.show{
+    opacity: 1;
+    position: static;
+
+}
+
+footer{
+    position: relative;
+}
+footer .mention{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    top:0;
+    left:0;
+
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+    
+    color: white;
+}
+footer div.show{
+    opacity: 1; !important
+    position:static;
+}
+.fade{
     opacity:100%;
     height: 100%;
     background-color: rgba(0,0,0,0.0);
@@ -77,16 +122,7 @@ header{
 .fade:hover{
     background-color: rgba(0,0,0,0.8);
 }
-.imgGoogle{
-    background-image: url("../img/google.png");
-}
-.imgInfusion{
-    background-image: url("../img/infusion.png");
-    
-}
-.imgEcosia{
-    background-image: url("../img/ecosia.png");
-}
+
 .container-description{
     background-color: rgba(0,0,0,0.8);
     color: white;
@@ -99,4 +135,25 @@ header{
 img {
     width: 100%;
     height: 100%;
+}
+.imgGoogle{
+    background-image: url("../img/google.png");
+}
+.imgInfusion{
+    background-image: url("../img/infusion.png");
+}
+.imgFacebook{
+    background-image: url("../img/facebook.png");
+}
+.imgInstagram{
+    background-image: url("../img/instagram.png");
+}
+.imgTwitter{
+    background-image: url("../img/twitter.png");
+}
+.imgLinkedin{
+    background-image: url("../img/linkedin.png");
+}
+.imgEcosia{
+    background-image: url("../img/ecosia.png");
 }
