@@ -2,16 +2,15 @@
 323031
 ffc857 - amarelo
 DB3A34 - vermelho
-084c61- azul escuro
-177e89 -azul claro
+084c61 - azul escuro
+177e89 - azul claro
 */
 
 html{
     margin: 0;
-
 }
 body{
-    background-color: #177e89;
+    background-color: white;
 }
 a{
     color:inherit;
@@ -30,65 +29,74 @@ header{
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-
-    height: 100vh;
     width: 100%;
-    
     color: #ffc857;
 }
 .headerContainer{
     margin: 12%;
 }
 .mote{
-    font-size: 2.7em;
+    font-size: 120px;
     margin-bottom: 2em;
     
 }
 .btnBig{
     display:inline-block;
-    background-color: transparent;
-    color: #ffc857;
-    padding: 0.5em 3em;
-    font-size: 30px;
-    border: 2px #ffc857 solid;
+    background-color:  #ffc857;
+    color:#323031;
+    font-size: 60px;
+    border: 4px #ffc857 solid;
     transition: 0.5s ease;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    vertical-align: middle;
 }
 .btnBig:hover{
     background: #ffc857;
     color: #323031;
 }
- 
 .contact{
     width: 100%;
     text-align: center;
     padding: 0.5em 0em;
-    font-size:2em;
-
+    font-size:80px;
     background-color: #ffc857 ;
     color: #323031;
-    position:absolute;
-    bottom: 0px;
-    margin: 0px;
 }
 .container{
     text-align: center;
-    height: 100vh;
     overflow:hidden;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    
 }
 .container-1-2{
-    display: inline-block;
-    width: 46%;
-    height: 46vh;
-    margin: 1%;
+    display: block;
+
+    height: 50vh;
+    margin-bottom: 5%;
     background-size: cover;
+}
+.description{
+    text-align: left;
+    margin: 3%;
+    color: #084c61
+}
+.description-title{
+    font-size: 80px;
+    border-bottom: 2px solid;
+}
+.description-content{
+    font-size: 50px;
 }
 .slider{
     position: relative;
     width: 100%;
     margin: auto;
-
-
 }
 .slider figure{
     width: 100%;
@@ -106,6 +114,7 @@ header{
 
 footer{
     position: relative;
+    font-size: 50px;
 }
 footer .mention{
     position: absolute;
@@ -115,18 +124,26 @@ footer .mention{
     position: absolute;
     top:0;
     left:0;
-
     text-align: center;
-    font-size: 2em;
-    padding: 1em;
+    padding: 0.5em;
     background-color: #ffc857;
     color: #323031;
+    
+}
+.phrase{
+    font-size: 40px;
+    text-align: justify;
+    
+}
+.phrase p{
+    margin-bottom: 1em;
 }
 
 footer div.show{
     opacity: 1; !important
-    position:static;
+    position: fixed;
 }
+
 .fade{
     opacity:100%;
     height: 100%;
@@ -136,14 +153,18 @@ footer div.show{
 .fade:hover{
     background-color: rgba(0,0,0,0.8);
 }
-
+.final{
+    margin-bottom: 5em;
+}
 .container-description{
     background-color: rgba(0,0,0,0.8);
     color: white;
-    font-size: 2em;
+    font-size: 4em;
     position: relative;
     top: 87%;
     height: 13%;
+    vertical-align: middle;
+    line-height: 150px;
 }
 
 img {
@@ -156,26 +177,9 @@ img {
 .imgInfusion{
     background-image: url("../img/infusion.png");
 }
-.imgFacebook{
-    background-image: url("../img/facebook.png");
-}
-.imgInstagram{
-    background-image: url("../img/instagram.png");
-}
-.imgTwitter{
-    background-image: url("../img/twitter.png");
-}
-.imgLinkedin{
-    background-image: url("../img/linkedin.png");
-}
-.imgStrata{
-    background-image: url("../img/Strata.PNG");
-}
-.imgFashion{
-    background-image: url("../img/fashion.PNG");
-}
+
 .mention .avatar{
-    margin-left: 0em 1em 0em 2em;
+    margin: 0em 1em 0em 1em;
     display: inline-block;
     float: left;
 }
@@ -187,4 +191,64 @@ img {
     margin: auto;
     overflow: hidden;
 }
+@media screen and (min-width: 1025px){
+    .btnBig{
+        background-color: transparent;
+        color: #ffc857;
+        font-size: 40px;
+        border: 2px #ffc857 solid;
+        width: 30%;
+        height: 80px;
+        line-height: 80px;
+    }
+    .contact{
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0em;
+        font-size:2em;
+        position:absolute;
+        bottom: 0px;
+        margin: 0px;
+    }
+    .container{
+        text-align: center;
+        overflow:hidden;
+        margin-top: 10vh;
+        padding: 15px;
+        display: block;
+    }
+    .container-1-2{
+        display: inline-block;
+        width: 46%;
+        height: 46vh;
+        margin: 1%;
+    }
+    .container-description{
+        font-size: 2em;
+        position: relative;
+        top: 87%;
+        height: 13%;
+        text-align: center;
+        line-height: 35px;
 
+    }
+    .description-title{
+        font-size: 50px;
+    }
+    .description-content{
+        font-size: 20px;
+    }
+    header{
+        height: 100vh;
+        width: 100%;
+
+        color: #ffc857;
+    }
+    .mote{
+        font-size: 2.7em;
+        margin-bottom: 2em;
+    }
+    .phrase{
+        font-size: 20px;
+    }
+}
