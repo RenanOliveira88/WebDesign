@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versao do html que deve ser renderizada-->
+<html lang="pt-br">
+	<head>
+		<title>Página de exemplo de estrura básica</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Renan">
+		<meta name="description" content="Lista de documentos">
+		<meta name="keywords" content="html5, tecnologia">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Task Manager</h1>
+
+		<p>Realize o login</p>
+		<form id="loginForm">
+			<label for="username"> Usuário: </label>
+			<input type="text" id="username">
+			<label for="password"> Senha: </label>
+			<input type="text" id="password"> 
+
+			<input type="submit" value="Entrar">
+			<button id="cadastrar" value="Cadastrar">Cadastrar</button>
+		</form>
+
+		<script>
+			var $form = document.getElementById("loginForm");
+
+			$form.addEventListener("submit", function(e){
+				e.preventDefault();
+
+				var username = document.getElementById('username').value;
+				var password = document.getElementById('password').value;
+
+				if (username == '') {
+					alert("Usuário não foi informado.");
+					return;
+				}
+				if (password == ''){
+					alert("Senha não foi informada.");
+					return;
+
+				}
+				var user = {
+					login : username,
+					senha : password
+				}
+				fetch('http://127.0.0.1:5000/login',{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(user)
+
+				})
+				.then(function(response){
+					if (response.ok){
+						return response.json();
+					}
+					throw new Error("Não foi possível efetuar login. Verifique o usuário e a senha.");
+				})
+				.then(function(data){
+					alert("Login efetuado com sucesso!")
+				})
+				.catch(function(error){
+					alert(error.message);
+				})
+			})
+
+			
+
+
+		</script>
+	</body>
+</html>
