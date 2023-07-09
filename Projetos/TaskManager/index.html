@@ -22,7 +22,7 @@
 			<input type="text" id="password"> 
 
 			<input type="submit" value="Entrar">
-			<button id="cadastrar" value="Cadastrar">Cadastrar</button>
+			<button type="button" id="cadastrar" value="Cadastrar" onclick='window.location.href="cadastro.html"'>Cadastrar</button>
 		</form>
 
 		<script>
@@ -62,16 +62,12 @@
 					throw new Error("Não foi possível efetuar login. Verifique o usuário e a senha.");
 				})
 				.then(function(data){
-					alert("Login efetuado com sucesso!")
+					alert("Login efetuado com sucesso!");
 				})
 				.catch(function(error){
 					alert(error.message);
 				})
 			})
-
-			
-
-
 		</script>
 	</body>
 </html>
